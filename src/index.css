@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg-main: #f4f5f7;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f8fafc;
+  --border-color: #e2e8f0;
+  --border-focus: #cbd5e1;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  
+  --accent-teal: #0d9488;
+  --accent-teal-light: #ccfbf1;
+  --accent-teal-dark: #0f766e;
+
+  --accent-indigo: #4f46e5;
+  --accent-indigo-light: #e0e7ff;
+  
+  --accent-amber: #d97706;
+  --accent-amber-light: #fef3c7;
+
+  --accent-rose: #e11d48;
+  --accent-rose-light: #ffe4e6;
+
+  --accent-emerald: #059669;
+  --accent-emerald-light: #d1fae5;
+
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-subtle: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+  --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.02);
+  --shadow-hover: 0 10px 15px -3px rgba(15, 23, 42, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0% {
+    r: 6px;
+    opacity: 0.8;
+  }
+  50% {
+    r: 16px;
+    opacity: 0.3;
+  }
+  100% {
+    r: 6px;
+    opacity: 0.8;
+  }
+}
+
+@keyframes dash-flow {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-glow 2.4s infinite ease-in-out;
+}
+
+.animate-dash {
+  stroke-dasharray: 6 4;
+  animation: dash-flow 2s linear infinite;
+}
+
+/* Off-white Card Component */
+.offwhite-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.2s ease-in-out;
+}
+
+.offwhite-card:hover {
+  box-shadow: var(--shadow-card);
+  border-color: var(--border-focus);
+}
+
+/* Badge System */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.badge-critico {
+  background-color: var(--accent-rose-light);
+  color: var(--accent-rose);
+  border: 1px solid rgba(225, 29, 72, 0.2);
+}
+
+.badge-moderado {
+  background-color: var(--accent-amber-light);
+  color: var(--accent-amber);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.badge-baixo {
+  background-color: var(--accent-emerald-light);
+  color: var(--accent-emerald);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.badge-monitoramento {
+  background-color: var(--accent-indigo-light);
+  color: var(--accent-indigo);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.badge-teal {
+  background-color: var(--accent-teal-light);
+  color: var(--accent-teal-dark);
+  border: 1px solid rgba(13, 148, 136, 0.2);
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--accent-teal);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-teal-dark);
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-card-subtle);
+  border-color: var(--border-focus);
+}
+
+.btn-danger {
+  background-color: var(--accent-rose);
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #be123c;
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 0.775rem;
+}
+
+/* SVG Brazil Map styling */
+.state-path {
+  fill: #f1f5f9;
+  stroke: #cbd5e1;
+  stroke-width: 1.2;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.state-path:hover {
+  fill: #e2e8f0;
+  stroke: var(--accent-teal);
+  stroke-width: 2;
+}
+
+.state-path.selected {
+  fill: #ccfbf1;
+  stroke: var(--accent-teal-dark);
+  stroke-width: 2.5;
+}
+
+.state-path.has-critical {
+  fill: #fff1f2;
+}
+
+.state-path.has-critical:hover {
+  fill: #ffe4e6;
+}
+
+/* Modal Backdrop */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
