@@ -36,7 +36,7 @@ export const ProvocationModal: React.FC<ProvocationModalProps> = ({ isOpen, onCl
               alignItems: 'center',
               justifyContent: 'center'
             }}>
-              <img src="/lapam_logo.png" alt="Logo LaPAM" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+              <img src="./lapam_logo.png" alt="Logo LaPAM" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
             </div>
 
             <div style={{

@@ -231,7 +231,7 @@ export const App: React.FC = () => {
       {/* Footer */}
       <footer style={{ marginTop: '40px', paddingBottom: '20px', textAlign: 'center', fontSize: '0.775rem', color: 'var(--text-muted)' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '8px' }}>
-          <img src="/lapam_logo.png" alt="Logo LaPAM" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
+          <img src="./lapam_logo.png" alt="Logo LaPAM" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
           <strong style={{ color: 'var(--text-primary)', fontSize: '0.85rem' }}>LaPAM</strong>
         </div>
         <p>

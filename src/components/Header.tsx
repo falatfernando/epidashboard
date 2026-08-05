@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenProvocation, onOpenSimulat
             justifyContent: 'center'
           }}>
             <img 
-              src="/lapam_logo.png" 
+              src="./lapam_logo.png" 
               alt="Logo LaPAM" 
               style={{ height: '44px', width: 'auto', objectFit: 'contain' }} 
             />
